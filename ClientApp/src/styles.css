@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+.form-rounded {
+  border-radius: 4px;
+}
+
+.search-area {
+  margin-top: 15px;
+  padding: 5px 0px 5px 0px;
+  width: 100%;
+}
+
+.search-box {
+  width: 100%;
+}
+
+.search-area button {
+}
+
+.search-results {
+  padding: 5px 0px 5px 0px;
+  border: thin solid black;
+  width: 100%
+}
+
+.search-results img {
+  max-width: 150px;
+}

@@ -1,0 +1,31 @@
+<div class="containter">
+  <div class="search-area">
+    <input class="form-rounded search-box" type="text" #searchString /><br />
+    <button class="form-rounded" (click)="searchPeople(searchString.value)">Search</button>
+    NOTE: This is a case insensitive search.
+  </div>
+  <div class="search-results">
+    <p *ngIf="!persons"><em>Loading...</em></p>
+
+    <table class='table' *ngIf="persons">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of persons">
+          <td>{{ person.id }}</td>
+          <td>{{ person.combinedName }}</td>
+          <td>{{ person.age }}</td>
+          <td>{{ person.address }}</td>
+          <td><img src="assets/{{ person.image }}" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
