@@ -4,28 +4,24 @@
     <button class="form-rounded" (click)="searchPeople(searchString.value)">Search</button>
     NOTE: This is a case insensitive search.
   </div>
-  <div class="search-results">
-    <p *ngIf="!persons"><em>Loading...</em></p>
 
-    <table class='table' *ngIf="persons">
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Address</th>
-          <th>Image</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let person of persons">
-          <td>{{ person.id }}</td>
-          <td>{{ person.combinedName }}</td>
-          <td>{{ person.age }}</td>
-          <td>{{ person.address }}</td>
-          <td><img src="assets/{{ person.image }}" /></td>
-        </tr>
-      </tbody>
-    </table>
+  <p *ngIf="isSearching"><img src="assets/loading.gif"/></p>
+
+
+  <div class="search-results" *ngIf="!isSearching">
+    <div class="header-row" *ngIf="persons">
+      <div class="name">Name</div>
+      <div class="age">Age</div>
+      <div class="address">Address</div>
+      <div class="interest">Interests</div>
+    </div>
+
+    <div class="data-row" *ngFor="let person of persons">
+      <div class="name">{{ person.combinedName }}</div>
+      <div class="age">{{ person.age }}</div>
+      <div class="address">{{ person.address }}</div>
+      <div class="interest">{{ person.interests }}</div>
+      <div class="image"><img src="assets/{{ person.image }}" onerror="this.onerror = null; this.src='assets/defaultImage.jpg';" /></div>
+    </div>
   </div>
 </div>

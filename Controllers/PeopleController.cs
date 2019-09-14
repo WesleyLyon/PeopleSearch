@@ -170,6 +170,8 @@ namespace PeopleSearch.Controllers
 
         private IEnumerable<Person> GetAllPeople ()
         {
+            System.Threading.Thread.Sleep(3000);
+
             return _context.Person.Select(p => new Person
             {
                 Id = p.Id,

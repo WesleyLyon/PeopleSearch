@@ -1,5 +1,4 @@
 import { Component, Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Person } from '../models/person';
 import { WebapiService } from '../services/webapi.service';
 
@@ -10,12 +9,18 @@ import { WebapiService } from '../services/webapi.service';
 
 export class HomeComponent {
   public persons: Person[];
+  isSearching: boolean = false;
 
   constructor(private webApiService: WebapiService) {
     this.searchPeople('');
   };
 
   public searchPeople(searchString) {
-    this.webApiService.getPeople({ searchString: searchString }).subscribe(result => this.persons = result);
+    this.isSearching = true;
+
+    this.webApiService.getPeople({ searchString: searchString }).subscribe(result => {
+      this.persons = result;
+      this.isSearching = false;
+    });
   }
 };
