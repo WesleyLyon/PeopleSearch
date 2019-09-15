@@ -26,15 +26,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\add-person\add-person.component.ts" />
     <None Remove="ClientApp\src\app\models\person.ts" />
-    <None Remove="ClientApp\src\app\services\web-api.service.ts" />
-    <None Remove="ClientApp\src\app\webapi\webapi.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\add-person\add-person.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\models\person.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\services\web-api.service.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\webapi\webapi.component.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
