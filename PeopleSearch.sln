@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleSearch", "PeopleSearch.csproj", "{32FB4004-F21F-4633-8E1E-8C72632A1564}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleSearch.Tests", "..\PeopleSearch.Tests\PeopleSearch.Tests.csproj", "{539FA94B-A834-43CC-BC00-A072F210A130}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleSearch.Tests", "PeopleSearch.Tests\PeopleSearch.Tests.csproj", "{959EA656-6CEA-4542-AF09-C6A97A4C08AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{32FB4004-F21F-4633-8E1E-8C72632A1564}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32FB4004-F21F-4633-8E1E-8C72632A1564}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32FB4004-F21F-4633-8E1E-8C72632A1564}.Release|Any CPU.Build.0 = Release|Any CPU
-		{539FA94B-A834-43CC-BC00-A072F210A130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{539FA94B-A834-43CC-BC00-A072F210A130}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{539FA94B-A834-43CC-BC00-A072F210A130}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{539FA94B-A834-43CC-BC00-A072F210A130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{959EA656-6CEA-4542-AF09-C6A97A4C08AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{959EA656-6CEA-4542-AF09-C6A97A4C08AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{959EA656-6CEA-4542-AF09-C6A97A4C08AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{959EA656-6CEA-4542-AF09-C6A97A4C08AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
