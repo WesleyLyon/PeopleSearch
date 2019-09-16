@@ -73,6 +73,7 @@ namespace PeopleSearch.Controllers
             return persons;
         }
 
+        #region future items
         // GET: api/People/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPerson([FromRoute] int id)
@@ -167,7 +168,9 @@ namespace PeopleSearch.Controllers
         {
             return _context.Person.Any(e => e.Id == id);
         }
+        #endregion
 
+        #region private methods
         private IEnumerable<Person> GetAllPeople ()
         {
             System.Threading.Thread.Sleep(3000);
@@ -183,5 +186,7 @@ namespace PeopleSearch.Controllers
                 Image = p.Image,
             });
         }
+
+        #endregion
     }
 }
